@@ -1,4 +1,4 @@
-## Musical instruments API with Django
+## Practise API with Django - Musical Instruments
 
 The purpose of this project is to practise using Django and various python technologies and design methodologies.
 
