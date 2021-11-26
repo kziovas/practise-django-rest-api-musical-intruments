@@ -7,6 +7,7 @@ Methodologies used:
   - Data transfer Objects (DTOs)
   - Object relational mapper (ORM)
   - API building conventions from  [OpenAPI specfifications](https://swagger.io/specification/)
+  - Class based views
 
 
 Tools used:
