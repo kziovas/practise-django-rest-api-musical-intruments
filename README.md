@@ -6,6 +6,7 @@ Tools used:
   - Django
   - Django REST framework
 
+
 Practises and patterns used:
   - Data transfer Objects (DTOs)
   - Object relational mapper (ORM)
