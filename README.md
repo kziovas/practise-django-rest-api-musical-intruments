@@ -16,3 +16,4 @@ Tools used:
   - MySQL
   - Django REST framework
   - Docker
+  - Docker Compose (for orchestration)
