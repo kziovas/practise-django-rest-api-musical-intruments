@@ -12,8 +12,9 @@ from Instruments.services import InstrumentsService
 
 # Application views live here
 class InstrumentViewSet(viewsets.ModelViewSet):
-
-    instrument_service = InstrumentsService()
+    def __init__(self, **kwargs):
+        self.instrument_service = InstrumentsService()
+        super().__init__(**kwargs)
 
     def list(self, request: HttpRequest):
         data = {}
@@ -31,7 +32,6 @@ class InstrumentViewSet(viewsets.ModelViewSet):
     def create(self, request):
         instrument_data = JSONParser().parse(request)
         data = {}
-        print(instrument_data)
 
         try:
             data = self.instrument_service.add_instrument(instrument_data)

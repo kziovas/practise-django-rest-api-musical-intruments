@@ -15,7 +15,6 @@ class InstrumentsService:
 
     def get_instrument_by_id(self, id: uuid.UUID):
         try:
-            self.instruments = Instrument.objects.all()
             instruments = get_object_or_404(self.instruments, pk=id)
             serializer = InstrumentsSerializer(instruments)
 
@@ -26,12 +25,13 @@ class InstrumentsService:
 
     def update_instrument_by_id(self, id: uuid.UUID, instrument_data: dict):
         try:
-            self.instruments = Instrument.objects.all()
+
             instruments = get_object_or_404(self.instruments, pk=id)
             serializer = InstrumentsSerializer(instruments, data=instrument_data)
 
             if serializer.is_valid():
                 serializer.save()
+
             else:
                 raise ValidationError(
                     "The data provided for updating an instrument are not valid"
@@ -40,11 +40,12 @@ class InstrumentsService:
         except Instrument.DoesNotExist as exc:
             raise NotFound(f"No items where found with the given id {id}")
 
+        self.instruments = Instrument.objects.all()
         return serializer.data
 
     def delete_instrument_by_id(self, id: uuid.UUID):
         try:
-            self.instruments = Instrument.objects.all()
+
             instruments = get_object_or_404(self.instruments, pk=id)
             serializer = InstrumentsSerializer(instruments)
             instruments.delete()
@@ -52,22 +53,24 @@ class InstrumentsService:
         except Instrument.DoesNotExist as exc:
             raise NotFound(f"No items where found with the given id {id}")
 
+        self.instruments = Instrument.objects.all()
         return serializer.data
 
     def get_instruments(self):
-        self.instruments = Instrument.objects.all()
         serializer = InstrumentsSerializer(self.instruments, many=True)
 
         return serializer.data
 
     def add_instrument(self, instrument_data: Instrument):
-        self.instruments = Instrument.objects.all()
+
         serializer = InstrumentsSerializer(data=instrument_data)
 
         if serializer.is_valid():
             serializer.save()
-            return serializer.data
         else:
             raise ValidationError(
                 "The data provided for registering a new instrument are not valid"
             )
+
+        self.instruments = Instrument.objects.all()
+        return serializer.data
