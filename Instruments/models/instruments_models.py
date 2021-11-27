@@ -2,6 +2,7 @@ import uuid
 import datetime
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
+from injector import singleton, inject
 
 # The app models live here
 class Genre(models.Model):

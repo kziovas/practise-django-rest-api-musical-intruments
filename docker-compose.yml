@@ -1,20 +1,23 @@
-version: "3.8"
+version: '3.7'
 services:
-  app:
-    build: .
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
-      - .:/django
+      - .:/app
     ports:
-      - 8080:8080
-    image: app:instruments_django
-    container_name: instruments_django_container
-    command: python manage.py runserver 0.0.0.0:8080
-    depends_on:
-      - db
+      - "8080:8080"
+
   db:
     image: mysql:5.7
+    restart: always
     environment:
-      MYSQL_DATABASE: 'mysqldb'
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+      - MYSQL_DATABASE=instruments_db
+      - MYSQL_USER=instruments_admin
+      - MYSQL_PASSWORD=instruments
+      - MYSQL_ROOT_PASSWORD=null
     volumes:
-      - ./data/mysql/db:/var/lib/mysql
+      - .instruments_db_data:/var/lib/mysql
+    ports:
+      - "33066:3306"

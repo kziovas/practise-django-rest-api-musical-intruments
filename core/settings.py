@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "Instruments.apps.InstrumentsConfig",
+    "django_injector",
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ DATABASES = {
         "NAME": "instruments_db",
         "USER": "instruments_admin",
         "PASSWORD": "instruments",
-        "HOST": "localhost",
+        "HOST": "db",
         "PORT": "3306",
     }
 }
@@ -133,4 +134,4 @@ STATIC_URL = "/static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ORIGIN_WHITELIST = ("https://127.0.0.1:8080",)
+CORS_ORIGIN_WHITELIST = ("https://127.0.0.1:8000",)

@@ -8,12 +8,15 @@ from rest_framework.response import Response
 from Instruments.services import InstrumentsService
 from rest_framework.decorators import api_view
 from Instruments.services import InstrumentsService
+from injector import singleton, inject
 
 
 # Application views live here
+@singleton
 class InstrumentViewSet(viewsets.ModelViewSet):
-    def __init__(self, **kwargs):
-        self.instrument_service = InstrumentsService()
+    @inject
+    def __init__(self, instrument_service: InstrumentsService, **kwargs):
+        self.instrument_service = instrument_service
         super().__init__(**kwargs)
 
     def list(self, request: HttpRequest):

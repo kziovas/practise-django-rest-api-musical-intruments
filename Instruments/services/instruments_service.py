@@ -7,8 +7,10 @@ from rest_framework import status
 from Instruments.models import Instrument
 from Instruments.serializers import InstrumentsSerializer
 from django.shortcuts import get_object_or_404
+from injector import inject, singleton
 
 
+@singleton
 class InstrumentsService:
     def __init__(self):
         self.instruments = Instrument.objects.all()
