@@ -15,4 +15,4 @@ Tools used:
   - Django
   - MySQL
   - Django REST framework
-  - Django-CORS-Headers
+  - Docker
