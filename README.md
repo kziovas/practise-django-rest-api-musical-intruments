@@ -8,6 +8,7 @@ Methodologies used:
   - Object relational mapper (ORM)
   - API building conventions from  [OpenAPI specfifications](https://swagger.io/specification/)
   - Class based views
+  - ViewSets routing
 
 
 Tools used:
