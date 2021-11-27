@@ -7,8 +7,8 @@ Methodologies used:
   - Data transfer Objects (DTOs)
   - Object relational mapper (ORM)
   - API building conventions from  [OpenAPI specfifications](https://swagger.io/specification/)
-  - Class based views
-  - ViewSets routing
+  - Dependency injection
+  - Class based views and ViewSets routing
 
 
 Tools used:
@@ -17,3 +17,4 @@ Tools used:
   - Django REST framework
   - Docker
   - Docker Compose (for orchestration)
+  - Injector
