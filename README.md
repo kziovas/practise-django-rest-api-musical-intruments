@@ -18,3 +18,7 @@ Tools used:
   - Docker
   - Docker Compose (for orchestration)
   - Injector
+
+---
+
+## Installation and deployment
