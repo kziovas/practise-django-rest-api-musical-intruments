@@ -1,1 +1,1 @@
-from .models import Instrument
+from .instruments_models import *

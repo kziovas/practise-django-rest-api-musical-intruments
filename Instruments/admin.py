@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Instrument, Genre
 
-# Register your models here.
+# Models registered here with administrator.
+admin.site.register(Instrument)
+admin.site.register(Genre)

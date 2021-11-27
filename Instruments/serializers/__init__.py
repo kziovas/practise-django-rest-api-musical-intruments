@@ -1,1 +1,1 @@
-from .serializer import InstrumentsSerializer
+from .instruments_serializer import InstrumentsSerializer

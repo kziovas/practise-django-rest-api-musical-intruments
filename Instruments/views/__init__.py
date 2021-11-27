@@ -1,1 +1,1 @@
-from .views import *
+from .instruments_views import InstrumentViewSet
