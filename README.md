@@ -39,14 +39,14 @@ Execute `docker-compose up` in this directory. Two containers should start one t
 The application should will try to connect to the database. If the database that is trying to connect does not exist it has to be first created in the database.
 This can be done either by the terminal inside the container or through the MySQL workbench. Some information can be found here: [Create a database in a Docker container for local development](https://developer.ibm.com/tutorials/docker-dev-db/). The default database details set in this project can be seen in the snippet below.
 
-If the databse was already created the service will connect to it automatically.
+If the database was already created the service will connect to it automatically.
 
 #### Run service in localhost
 
 For easier testing and debugging the application an be run in the localhost by moving to the directory where the `manage.py` file is and execute the command:
 `"python3", "manage.py", "runserver", "0.0.0.0:8080"`
 
-A MySQL server must exist in the localhost as well and a database should also exist there that matches the database details found in the `core/settings.py`. The default details that were set in the project can be seen below.
+A MySQL server must exist in the localhost and a database should also exist there that matches the database details found in the `core/settings.py`. The default details that were set in the project can be seen below.
 
 <pre>
 DATABASES = {
