@@ -10,6 +10,7 @@ Methodologies used:
   - API building conventions from  [OpenAPI specfifications](https://swagger.io/specification/)
   - Dependency injection
   - Class based views and ViewSets routing
+  - Containerization
 
 
 Tools used:
