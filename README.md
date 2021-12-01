@@ -1,4 +1,4 @@
-## Practise Django REST Framework API- Musical Instruments
+## Practise Django REST API- Musical Instruments
 
 The project is meant to be a starting point, an experimentation or a basic example of a way to develop an API with Django. 
 It is an exercise on using Django and various python technologies and design methodologies.
