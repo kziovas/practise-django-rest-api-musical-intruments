@@ -11,6 +11,8 @@ Methodologies used:
   - Dependency injection
   - Class based views and ViewSets routing
   - Containerization
+  - Microservices
+  - Class composition
 
 
 Tools used:
